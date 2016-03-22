@@ -60,7 +60,8 @@ public extension FBSnapshotTestCase {
 
   func assert(assertion: Bool, message: String, file: String, line: UInt) {
     if !assertion {
-      XCTFail(message, file: file, line: line)
+      XCTFail(message)
+//      XCTFail(message, file: StaticString(file), line: line)
     }
   }
 }
